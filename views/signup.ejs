@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    This is my sign up page
+    <form action = '/signup' method = 'post'>
+        <input type = 'email' placeholder="Enter your email" name = 'email'>
+        <input type = 'password' placeholder="Enter your password" name = 'password'>
+        <button>submit</button>
+    </form>
+</body>
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit',async (e)=>{
+        
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email,password);
+
+        try{
+            const res = await fetch('/signup',{
+                method:'post',
+                body: JSON.stringify({email,password}),
+                headers: {'Content-type':'application/json'},
+            });
+            location.assign('/homepage.ejs');
+        }
+        catch(err){
+           
+            console.log(err);
+        }
+    });
+</script>
+</html>
