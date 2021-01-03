@@ -27,7 +27,7 @@
         color:purple;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }#out{
-        color:rgba(51, 3, 53,0.8);
+        color:rgba(180, 24, 185, 0.8);
         font-size:14px;
         border:1px solid purple;
         text-align: center;
@@ -45,7 +45,43 @@
     }
 
 </style>
+<script>(function(w, d) { w.CollectId = "5fbf924d26be6347b188a6e7"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><div id = "leftlogo"><img  height="70px" width="150px" style='border:1px solid black' src = "logowix.jpeg"></div></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Track My BMI <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Other Products
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Make My Food</a>
+                <a class="dropdown-item" href="https://ayushkwal.github.io/Dangerous-Dragon-Game/">Dangerous-Dragon Game</a>
+                <a class="dropdown-item" href="#">Get My Bill</a>
+                <a class="dropdown-item" href="#">Test my Water</a>
+                <a class="dropdown-item" href="#">Check My Friend's Result</a>
+                <a class="dropdown-item" href="#">Latest News</a>
+                <a class="dropdown-item" href="#">To-Do-Note</a>
+                <a class="dropdown-item" href="#">Suggest Gym</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <blockquote class="blockquote text-center">
         <p class="mb-3" id = "bmi"><h1>BMI-Calculator</h1></p>
         <footer class="blockquote-footer">Powered BY <cite title="Source Title">HEALTHTRACKER</cite></footer>
@@ -98,21 +134,26 @@
         else if(c>18.5&&c<24.9)
         {
             afterBmi.innerHTML=`<div id = "out"><h1>We are glad to tell you that You are Fit! Your BMI is ${c} </h1><h3>Do you really wanna to be fit always as you are now?</h3><br>
-                                
+                                <a class = "btna" href = "normal.ejs">Check</a>
+                                </div>
                                 `;
         }
         else if(c>25&&c<29.9)
         {
             afterBmi.innerHTML=`<div id = "out"><h1>You are OverWeight! Your BMI is ${c} </h1><h3>You need to change your diet.Don't worry, HEALTHTRACKER will help you. </h3><br>
-                                
+                                <a class = "btna" href = "overweight.ejs">Check</a></div>
                                 `;
         }
         else if(c>30&&c<35)
         {
-            afterBmi.innerHTML=`<div id = "out"><h1>Hey, You are Obese! Your BMI is ${c}. You really need to change your diet as soon as possible. Don't worry, HEALTHTRACKER will help you. <br>`;
-        }
+            afterBmi.innerHTML=`<div id = "out"><h1>Hey, You are Obese! Your BMI is ${c}. You really need to change your diet as soon as possible. Don't worry, HEALTHTRACKER will help you. <br>
+                                <a class = "btna" href = "obese.ejs">Check</a></div>
+                                `;
+
+            }
         else{
-            afterBmi.innerHTML=`<div id = "out">Sorry, You have entered some error while inserting data</div>`;
+            afterBmi.innerHTML=`<div id = "out">Sorry, You have entered some error while inserting data. Re-enter the data correctly</div>
+            `;
         }
        
 

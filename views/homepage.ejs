@@ -3,11 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><img src = "mainlogo.jpg">Document</title>
+    <link rel="icon" href="mainlogo.jpg" type="image/icon type">
 </head>
+<link rel="icon" href="I:\MINI PROJECT 2020\main files\thumbnail.png"  type="image/x-icon">
+<link href='https://fonts.googleapis.com/css?family=Almendra SC' rel='stylesheet'>
+<style>
+ 
+    .nav_ul{
+        display:flex;
+        list-style: none;
+        height:30px;
+       
+    }
+    .nav_ul li{
+        margin:auto;
+        padding-top:10px;
+        
+        
+    }
+    .nav_ul li a{
+        
+        text-decoration: none;
+        color:white;
+        border:1px solid white;
+        background-color:black;
+        padding: 9px 10px;
+        border-radius: 20px;        
+    }
+    .nav_ul li a:hover{
+        color:black;
+        background-color: white;
+        padding: 10px 30px;
+    }
+    #burger{
+        position:absolute;
+        right:5%;
+        top:30px;
+        display:none;
+
+    }
+    .lines{
+        height:2px;
+        width:22px;
+        margin:5px 3px;
+        background-color: white;
+    }
+    #bg{
+        display:flex;
+        width:100%;
+        position:absolute;
+        top: 0px;
+        height:600px;
+        background-color: aliceblue;
+        z-index: -1;
+        justify-content: center;
+        filter:brightness(80%);
+        
+
+    }
+ 
+    #bg img{
+        display:flex;
+        width:100%;
+        position:absolute;
+        top: 0px;
+        height:600px;
+        background-color: aliceblue;
+        background-image:url("card.jpg");
+        z-index: -1;
+    }
+    .tagline{
+        display: flex;
+        font-size:50px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        overflow:hidden;
+        color:white;
+    }
+    #tagp{
+        font-size:20px;
+    }
+    
+    #sec2{
+        display:flex;
+        position: absolute;
+        top:600px;
+        background-image:url("rose.jpg");
+        height: 600px;
+        width:100%;
+        text-align:center;
+        z-index:5;
+    }
+    .choose{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content:center;
+        margin:0px auto;
+        padding-top: 60px;
+        color: white;
+        z-index:5;
+        font-size:40px;
+    }
+    #readygame{
+        font-size:20px;
+        color: white;
+    }
+    #clickbtn a{
+        display:inline;
+        border:1px solid white;
+        padding: 20px 30px;
+        border-radius: 40px;
+        color:white;
+        text-decoration: none;
+        transition: all 2s ease-in;
+    }
+    #clickbtn a:hover::after{
+        content: attr(data-hover);
+    }
+
+   
+
+    @media only screen and (max-width:1000px)
+    {
+        .navbar{
+            height:170px;
+            transition: all 1s ease-in;
+        }
+        .nav_ul{
+            display:flex;
+            flex-direction:column;
+        }
+        .nav_ul li {
+            margin-top:15px;
+            border: none;
+        }
+        #burger{
+            display:block;
+        }
+
+        .heightforresponsive{
+        height:30px;
+    }
+    .visibilityforresponsive{
+        visibility: hidden;
+    }
+
+    .tagline{
+        font-size:20px;
+    }
+    .nav_ul li a{
+        
+        text-decoration: none;
+        color:white;
+        border:none;
+        background-color:transparent;
+        padding: 9px 10px;
+        border-radius: 0px;        
+    }
+
+    .choose{
+        font-size:30px;
+    }
+    #clickbtn a{
+        padding: 10px 10px;
+    }
+
+    }
+    #logout a{
+      border: 1px solid black;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 8px 12px;
+    }
+    .carousel-inner img{
+      height:520px;
+      max-width:80%;
+      margin:auto;
+      
+    }
+   
+</style>
+<script>(function(w, d) { w.CollectId = "5fbf924d26be6347b188a6e7"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+         <div id = "logout"><a href = "/logout">Logout</a></div>
+        </div>
+       </ul>
+        
+        </div>
+      </nav>
     This is my home page file
     Redirect Me to bmicalculator
     <a href = "/bmi.ejs">BMI</a>
+    <a href = "/about.ejs">About</a>
+    <a href = "https://ayushkwal.github.io/Dangerous-Dragon-Game/">Play Game</a>
+    <a href = "https://www.google.com/search?sxsrf=ALeKk01xhO3I6ee0m5aDmW7Nj3u2V_gZVg%3A1606485361342&source=hp&ei=cQXBX4e3EpPdrQHU2Z-4DQ&q=gyms+near+me&oq=gyms+near+me&gs_lcp=CgZwc3ktYWIQAzIFCAAQyQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgjECc6CAgAELEDEIMBOgUIABCxAzoICAAQsQMQyQM6CAguEMcBEK8BOgUILhCxAzoICC4QsQMQgwFQqgtYoCBgoiJoAHAAeACAAeYBiAGCEZIBBTAuNy40mAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwjHs7Cq8KLtAhWTbisKHdTsB9cQ4dUDCAc&uact=5">Gyms</a>
+    <a href = "">Test my Water</a>
+    <a href = "">Give my electricity Bill</a>
+    <a href = "">Predict my friend's University Rollno</a>
+    <a href = "">Make My Food</a>
+    <br><br><br><br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 " src="whatodo.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 " src="whattoeat.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 " src="enjoy.jpg" alt="Third slide">
+        </div>
+      </div>
+     
+    </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"><b></b>></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+     
+<hr>
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2 style="font-family: courier new; color: white;"><b>ABOUT </b></h2>
+      
+      <div class="aboutimg"><img src="cycle.jpg" alt="about" style="width:73%" height=></div>
+      <p style="color: red ;font-size:20px;font-family: Electrolize"> 
+<i>HEALTH is a vital aspect of life. As said "HEALTH IS WEALTH", today's busy schedule has lead to decreased health and moreover due to COVID-19 and nationwide lockdown has lead to lethargic and lazy lifestyle for many. Mental health is also affected along with drop in physical health. HEALTHTRACKER helps you to give a reference line to check your health status.</i></p>
+      
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2 style="font-family: courier new; color: white;"><b>HOW IT WORKS</b></h2>
+      <!--div class="fakeimg">Fake Image</div-->
+      <p style="color:gray;font-size:20px;font-family: Electrolize; color: white;"><i>It will calculate fitness through BMI. HEALTHTRACKER  helps you to check your health & maintain it according to the results. It help in giving a line of reference to check fitness level. It will calculate your BMI and as per the results, it will show you the category you fall in like healthy, overweight, underweight, Obesity type. Based on the result it will recommend you a calorie intake required by your body. It will also provide you with gyms nearby by redirecting you to Maps. You can also check out some helthy food recipes provided in the Recipe section on the webpage by simply clicking on the 'Recipe' link given under the 'Other Services' section below.</i></p>
+      <br>
+      <br>
+      <br>
+      <pre><h2 style="font-family: Almendra SC; color: white;"><b>
+
+  Are
+      You
+           Ready!</b></h2></pre>
+      <br><br>
+      <button type="start" class="btn" data-target="BMI CALCULATOR" onclick="document.location='BMI-CALCULATOR.html'">Let's Get Started</button>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br>
+<hr style="height: 3px; background-color: red; width: 220px">
+
+<div class="others" style="text-align: center;">
+<h3 style="color: white;">Our Other Services...</h3>
+      <p style="color: white;">Click on the link you want to.</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">HealthTracker</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="I:\MINI PROJECT 2020\main files\Recipe-section.html">Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Electricity Bill Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">More Coming Soon...</a>
+        </li>
+      </div>
+
+</ul>
+<div class="jumbotron text-center" style="margin-bottom:0px;background-color: #524553;">
+  <p style="color: white;"><b><i>Contact:</i></b></p>
+   <a href="https://facebook.com"><i class="fa fa-facebook-official"><img src="" alt="FaceBook" title="FaceBook" width="27px"></i></a>
+
+  <a href="https://www.twitter.com"><i class="fa fa-twitter"><img src="I:\MINI PROJECT 2020\main files\twitter.jpg" alt="twitter" title="twitter" width="27px"></i></a>
+  <a href="https://www.instagram.com"><i class="fa fa-instagram">
+   <img src="I:\MINI PROJECT 2020\main files\insta.jpg" alt="instagram" title="instagram" width="27px"> 
+  </i></a>
+  <a href="https://www.linkdin.com"><i class="fa fa-linkedin">
+   <img src="‪‪‪I:\MINI PROJECT 2020\main files\linkedInIMG.jpg" alt="linkedin" title="linkedin" width="27px"> </i></a>
+
+   <p style="color: white;"><br>Or you can mail to <a href="mailto:archit1913091@akgec.ac.in" target="_blank" title="archit1913091@akgec.ac.in"><u>Archit </u></a>& <a href="mailto:ayush1913085@akgec.ac.in" target="_blank" title="ayush1913085@akgec.ac.in"><u>Ayush.</u></a></p>
+  <p style="color: white;">Copyright © 2020 HEALTHTRACKER Pvt. Ltd. All rights reserved.</p>
+</div>
 </body>
+<script>
+    burger = document.getElementById("burger");
+    navul = document.querySelector('.nav_ul');
+    navbar = document.querySelector('.navbar');
+
+   
+    burger.addEventListener("click",()=>{
+        navbar.classList.toggle('heightforresponsive');
+        navul.classList.toggle('visibilityforresponsive');
+    })
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </html>
